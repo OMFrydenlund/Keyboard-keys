@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .key {
+            height: 45px;
+            width: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="clickedKeyIsThis"></p> <br><br>
+    <div class="buttons">
+        <button class="key" onclick="clickedKey(this)">A</button>
+        <button class="key" onclick="clickedKey(this)">B</button>
+        <button class="key" onclick="clickedKey(this)">C</button>
+        <button class="key" onclick="clickedKey(this)">D</button>
+        <button class="key" onclick="clickedKey(this)">E</button>
+    </div>
+    <script>
+        var thisKeyWasClicked = document.getElementById('clickedKeyIsThis');
+
+        function clickedKey(button) {
+            var showTheKey = button.textContent;
+            thisKeyWasClicked.innerHTML = showTheKey;
+        }
+    </script>
+</body>
+
+</html>
